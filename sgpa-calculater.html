@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #000000;
+          background-image: linear-gradient(0deg, #000000 0%, #1acfe6 100%);
+      height: 100vh;
+        }
+        .heading{
+            color: #ffffff;
+            text-align: center;
+
+        }
+        .container{
+            background-color: #ffffff;
+            width: 200px;
+           padding: 10px;
+           display: block;
+           margin: auto;
+           border-radius: 20px;
+           height: 150px;
+           justify-content: space-around;
+        }
+        .field{
+            width: 80%;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 5px;
+        }
+        .btn{
+            display: block;
+            margin: auto;
+            background-color: #000000;
+          background-image: linear-gradient(0deg, #000000 0%, #1acfe6 100%);
+          border: none;
+          border-radius: 10px;
+          padding: 5px;
+          color: #ffffff;
+          font-size:    10px;
+          margin-top: 30px;
+          cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h2 class="heading">SGPA TO PERCENTAGE CALCULATOR</h2>
+    <div class="container">
+       SGPA :<input type="text" id="num1" placeholder="Enter The SGPA" class="field"/>
+
+       
+        <p id="ans">   </p>
+
+       <button type="button" class="btn" onclick="calArea()">CALCULATE</button>
+       <button type="button" class="btn" onclick="reset()">RESET</button>
+    </div>
+
+    <script>
+       function calArea(){
+        const input1 = document.getElementById("num1");
+
+        
+
+        const area = parseFloat(input1.value) * 10 - 7.5;
+
+        const ansElement = document.getElementById("ans");
+
+        ansElement.innerText = `PERCENTAGE: ${area}%`;
+       }
+     
+
+    </script>
+</body>
+</html>
